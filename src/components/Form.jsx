@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Button from "./Button";
 function Form() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -17,7 +17,8 @@ function Form() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button>Submit</button>
+      {/* Reusable Button component */}
+      <Button>Submit</Button>
       {submitted && <p>Form submitted</p>}
     </form>
   );
