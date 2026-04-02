@@ -19,7 +19,7 @@ function Form() {
       />
       {/* Reusable Button component */}
       <Button>Submit</Button>
-      {submitted && <p>Form submitted</p>}
+      {submitted && <p className="success">Form submitted</p>}
     </form>
   );
 }
