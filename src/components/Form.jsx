@@ -2,10 +2,11 @@ import { useState } from "react";
 
 function Form() {
   const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("Submitted: ", email);
+    setSubmitted(true);
   }
 
   return (
@@ -17,6 +18,7 @@ function Form() {
         onChange={(e) => setEmail(e.target.value)}
       />
       <button>Submit</button>
+      {submitted && <p>Form submitted</p>}
     </form>
   );
 }
